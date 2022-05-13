@@ -33,6 +33,7 @@ android {
 
 dependencies {
 
+    implementation project(path: ":mylibrary")
     implementation "androidx.core:core-ktx:$coreVer"
     implementation "androidx.appcompat:appcompat:$appcompatVer"
     implementation "com.google.android.material:material:$materialVer"

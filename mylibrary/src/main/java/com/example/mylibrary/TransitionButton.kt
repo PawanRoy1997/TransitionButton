@@ -120,7 +120,7 @@ class TransitionButton : AppCompatButton {
     }
 
     fun stopAnimation(
-        stopAnimationStyle: StopAnimationStyle?,
+        stopAnimationStyle: StopAnimationStyle,
         onAnimationStopEndListener: OnAnimationStopEndListener?
     ) {
         when (stopAnimationStyle) {
@@ -165,9 +165,9 @@ class TransitionButton : AppCompatButton {
     private fun startWidthAnimation(from: Int, to: Int, onAnimationEnd: AnimatorListenerAdapter?) {
         val widthAnimation = ValueAnimator.ofInt(from, to)
         widthAnimation.addUpdateListener { valueAnimator ->
-            val `val` = valueAnimator.animatedValue as Int
+            val valAnimator = valueAnimator.animatedValue as Int
             val layoutParams = layoutParams
-            layoutParams.width = `val`
+            layoutParams.width = valAnimator
             setLayoutParams(layoutParams)
         }
         val animatorSet = AnimatorSet()

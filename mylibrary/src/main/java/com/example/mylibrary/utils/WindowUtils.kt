@@ -8,8 +8,6 @@ import android.view.WindowManager
 
 object WindowUtils {
 
-    private lateinit var displayMetrics: DisplayMetrics
-
     fun setWindowFlag(activity: Activity, bits: Int, on: Boolean) {
         val win = activity.window
         val winParams = win.attributes
@@ -32,31 +30,18 @@ object WindowUtils {
     }
 
     fun getWidth(activity: Activity): Int {
-        setupDisplayMetrics(activity)
-        return displayMetrics.widthPixels
+        return activity.resources.displayMetrics.widthPixels
     }
 
     fun getHeight(activity: Activity): Int {
-        setupDisplayMetrics(activity)
-        return displayMetrics.heightPixels
+        return activity.resources.displayMetrics.heightPixels
     }
 
     fun getWidth(context: Context): Int {
-        setupDisplayMetrics(context)
-        return displayMetrics.widthPixels
+        return context.resources.displayMetrics.widthPixels
     }
 
     fun getHeight(context: Context): Int {
-        setupDisplayMetrics(context)
-        return displayMetrics.heightPixels
+        return context.resources.displayMetrics.heightPixels
     }
-
-    private fun setupDisplayMetrics(activity: Activity) {
-        activity.resources.displayMetrics
-    }
-
-    private fun setupDisplayMetrics(context: Context) {
-        context.resources.displayMetrics
-    }
-
 }
