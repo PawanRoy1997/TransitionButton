@@ -1,4 +1,4 @@
-package com.example.mylibrary.utils
+package com.example.mylibrary
 
 import android.animation.Animator
 import android.animation.ObjectAnimator
