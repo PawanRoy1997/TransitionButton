@@ -8,3 +8,20 @@ plugins {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+project.ext {
+    projectMinSdk = 21
+    projectTargetSdk = 32
+    projectVersionCode = 1
+    projectVersionName = "1.0"
+}
+
+ext {
+    coreVer = '1.7.0'
+    appcompatVer = '1.4.1'
+    materialVer = '1.6.0'
+    constraintVer = '2.1.3'
+    junitVer = '4.13.2'
+    junitExtVer = '1.1.3'
+    espressoCoreVer = '3.4.0'
+}
