@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorAccent" format="color"/>
+    <declare-styleable name="TransitionButton">
+        <attr name="defaultColor" format="color"/>
+        <attr name="loaderColor" format="color"/>
+    </declare-styleable>
+</resources>
