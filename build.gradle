@@ -10,6 +10,7 @@ task clean(type: Delete) {
 }
 
 project.ext {
+    projectCompileSdk = 32
     projectMinSdk = 21
     projectTargetSdk = 32
     projectVersionCode = 1
