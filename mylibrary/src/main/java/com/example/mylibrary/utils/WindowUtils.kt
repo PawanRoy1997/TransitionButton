@@ -6,7 +6,7 @@ import android.graphics.Color
 import android.util.DisplayMetrics
 import android.view.WindowManager
 
-class WindowUtils {
+object WindowUtils {
 
     private lateinit var displayMetrics: DisplayMetrics
 
